@@ -18,7 +18,7 @@ const minuteTitle = document.getElementById("minute-title")
 const secondEl = document.getElementById("second")
 const secondTitle = document.getElementById("second-title")
 
-const targetDate = new Date("10.7.2024").getTime()
+const targetDate = new Date(2024, 9, 7).getTime()
 
 setInterval(function() {
   const todayDate = new Date().getTime()
