@@ -20,7 +20,7 @@ const secondTitle = document.getElementById("second-title")
 
 const targetDate = new Date("10.7.2024").getTime()
 
-const timer = setInterval(function() {
+setInterval(function() {
   const todayDate = new Date().getTime()
   const leftTime = targetDate - todayDate
   if (leftTime <= 0) {
@@ -30,14 +30,13 @@ const timer = setInterval(function() {
     } else {
       weddingEl.textContent = "Свадьба уже прошла :-("
     }
-  clearInterval(timer)
   } else {
     dayEl.textContent = Math.floor(leftTime / ISOmilDay)
     hourEl.textContent = Math.floor((leftTime % ISOmilDay) / ISOmilHour)
     minuteEl.textContent = Math.floor((leftTime % ISOmilHour) / ISOmilMinute)
     secondEl.textContent = Math.floor((leftTime % ISOmilMinute) / ISOmilSec)
   }
-})
+}, 1000)
 
 const approveWillBeList = ["approve-yes", "approve-no"]
 const approveWithWhoList = ["approve-alone", "approve-friend", "approve-partner", "approve-family"]
