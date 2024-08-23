@@ -1,0 +1,564 @@
+@font-face {
+  font-family: bickham;
+  src: url("./media/fonts/BIKHAM\ CYR\ SCRIPT.TTF") format("opentype");
+}
+
+@font-face {
+  font-family: seawave;
+  src: url("./media/fonts/stseawave.otf") format("opentype");
+}
+
+@font-face {
+  font-family: georgia;
+  src: url("./media/fonts/georgia.ttf") format("opentype");
+}
+
+
+*, 
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: linear all 0.25s;
+}
+
+:root {
+  --text-color: #fafafa;
+  --bg-color: #010101;
+  --accent-color: #b8b844;
+  --primary-color: #0101fa;
+  --secondary-color: #5757fa;
+}
+
+html {
+  font-size: 16px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.scroll-watcher {
+  height: 5px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--accent-color);
+  width: 100%;
+  transform-origin: left;
+  scale: 0 1;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+}
+
+.container {
+  width: 100%;
+  padding-inline: calc(1.5rem * 0.5);
+  margin-inline: auto;
+  margin-top: 4rem;
+}
+
+.preview {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  height: max-content;
+}
+
+.preview-title {
+  font-family: 'seawave';
+  font-size: 2rem;
+}
+
+.preview-names {
+  font-family: "bickham";
+  font-weight: 300;
+  font-size: 6rem;
+}
+
+.preview-date {
+  font-family: "seawave";
+  font-size: 1.5rem;
+}
+
+.preview-location {
+  font-size: 1.2rem;
+}
+
+.preview-img {
+  display: block;
+  background-size: cover;
+  margin-inline: auto;
+  width: 22rem;
+  height: auto;
+  margin-top: 4rem;
+  box-shadow: 0 0 .2rem .2rem var(--text-color);
+}
+
+.preview-title,
+.preview-names,
+.preview-date,
+.preview-location,
+.preview-img {
+  animation: fadeIn linear 2s;
+}
+
+
+.wedding-status {
+  font-family: "bickham";
+  font-size: 5rem;
+  font-weight: 300;
+}
+
+.countdown {
+  text-align: center;
+  color: var(--bg-color);
+}
+
+.countdown-timer {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  grid-template-rows: 1fr;
+  gap: 0 .7rem;
+  color: var(--text-color);
+  justify-content: center;
+}
+
+.countdown-item {
+  color: var(--bg-color);
+}
+
+.countdown-item > p:nth-child(1) {
+  font-family: "seawave";
+  font-size: 3rem;
+  font-weight: 550;
+}
+
+.invite {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  justify-content: center;
+  text-align: right;
+  border-radius: 2rem;
+  padding: 1rem;
+  height: 30rem;
+  background-image: url("./media/img/invite.JPG");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.invite-title {
+  font-family: "bickham";
+  font-weight: 300;
+  font-size: 6rem;
+}
+
+.invite-content {
+  font-family: "georgia";
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.invite-date {
+  font-family: "seawave";
+  font-size: 5rem;
+  font-weight: 500;
+}
+
+.location {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: .5rem;
+  justify-content: center;
+}
+
+.location > * {
+  text-align: center;
+}
+
+.location-title {
+  font-family: bickham;
+  font-weight: 300;
+  font-size: 6rem;
+}
+
+.location-content,
+.location-place {
+  font-size: 2rem;
+}
+
+.location-address {
+  margin-block: 1rem;
+  font-size: 1.2rem;
+}
+
+.location-url {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  width: max-content;
+  padding-inline: 2rem;
+  padding-block: .4rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  transition: linear .25s;
+  transform-origin: left;
+}
+
+.location-url:hover {
+  background-color: var(--primary-color);
+}
+
+.location-img {
+  filter: brightness(80%);
+}
+
+.timing-title {
+  font-family: "bickham";
+  font-size: 6rem;
+  text-align: center;
+}
+
+.timing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+}
+
+.timing-col-2 {
+  justify-content: center;
+  text-align: center;
+  margin-block: auto;
+}
+
+.timing-time {
+  font-family: "georgia";
+  font-size: 2rem;
+}
+
+.timing-content {
+  margin-bottom: 2rem;
+}
+
+.timing-img {
+  height: 35rem;
+  border-radius: 1rem;
+}
+
+.suit {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 1rem;
+  justify-content: center;
+}
+
+.suit > div:nth-child(2) {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.suit-title {
+  font-family: "bickham";
+  font-size: 6rem;
+}
+
+.suit-content {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-block: 2rem;
+}
+
+.suit-name {
+  font-size: 2.4rem;
+  color: var(--accent-color);
+  text-align: center;
+}
+
+.suit-img {
+  height: 35rem;
+  filter: grayscale(60%);
+  border-radius: 1rem;
+}
+
+.approve-title {
+  font-family: "bickham";
+  font-size: 6rem;
+  text-align: center;
+}
+
+.approve-desc {
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: "georgia";
+}
+
+.approve-input {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.2rem;
+  padding: .2rem;
+  margin-block: .5rem;
+  font-family: "georgia";
+  border: none;
+  outline: none;
+  color: var(--bg-color);
+  border-bottom: solid 1px var(--bg-color);
+  transition: all linear .1s;
+}
+
+.approve-input:hover {
+  border-bottom: solid 3px var(--accent-color);
+}
+
+.approve-input:focus {
+  border-bottom: solid 3px var(--primary-color);
+}
+
+.approve-question {
+  display: block;
+  font-size: 1.3rem;
+  margin-top: 2rem;
+}
+
+.approve-choise {
+  display: grid;
+  grid-template-columns: 4rem auto;
+  grid-template-rows: 1fr;
+  gap: .5rem;
+  margin: .25rem;
+}
+
+.approve-choise > input[type="radio"] {
+  width: 6rem;
+  height: auto;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.approve-choise > label {
+  font-size: 1.2rem;
+}
+
+.approve-btn {
+  display: block;
+  text-align: center;
+  margin-inline: auto;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  width: max-content;
+  padding-inline: 2rem;
+  padding-block: .4rem;
+  border-radius: 1rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  transition: linear .25s;
+}
+
+.approve-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.contact {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  justify-content: center;
+  text-align: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  min-height: 30rem;
+}
+
+.contact-title {
+  font-family: "bickham";
+  font-size: 6rem;
+}
+
+.contact-desc {
+  font-family: "georgia";
+  font-size: 1.4rem;
+  margin-block: 1rem;
+}
+
+.contact-name {
+  font-family: "georgia";
+  font-size: 1.6rem;
+}
+
+.contact-link > svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.footer {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  min-height: 6rem;
+  margin-top: 6rem;
+}
+
+.footer-row-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: .25rem;
+}
+
+.footer-row-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 4rem;
+  gap: .25rem;
+}
+
+.footer-link {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--text-color);
+  border-radius: .3rem;
+}
+
+.footer-link > svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: .25rem;
+}
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+  }
+  .preview {
+    height: max-content;
+  }
+  .preview-title {
+    font-size: 4rem;
+  }
+  .preview-img {
+    width: 90vw;
+  }
+  .invite {
+    height: max-content;
+    object-fit: cover;
+    text-align: center;
+    mix-blend-mode: saturation;
+  }
+  .invite-title {
+    font-size: 4rem;
+  }
+  .invite-date {
+    font-size: 3rem;
+  }
+  .location {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .location-title {
+    font-size: 4rem;
+  }
+  .location-img {
+    width: 100%;
+    height: auto;
+  }
+  .timing-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-content: center;
+  }
+  .timing-title {
+    font-size: 4rem;
+  }
+  .timing-col-1 {
+    margin-inline: auto;
+  }
+  .suit {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .suit-title {
+    font-size: 4rem;
+    text-align: center;
+  }
+  .suit > div:nth-child(2) {
+    margin-inline: auto;
+  }
+  .approve {
+    display: block;
+    width: 100%;
+  }
+  .approve-title {
+    font-size: 4rem;
+  }
+  .contact-title {
+    font-size: 4rem;
+  }
+}
+@media (min-width: 576px) { .container {max-width: 540px} }
+@media (min-width: 768px) { .container {max-width: 720px} }
+@media (min-width: 992px) { .container {max-width: 960px} }
+@media (min-width: 1200px) { .container {max-width: 1140px} }
+@media (min-width: 1400px) { .container {max-width: 1320px} }
+
+@media (prefers-reduced-motion: no-preference) {
+  .wedding-status,
+  .countdown-item,
+  .invite-title,
+  .invite-content,
+  .invite-date,
+  .location-title,
+  .location-repeat,
+  .location-content,
+  .location-place,
+  .location-address,
+  .location-url,
+  .location-img,
+  .timing-title,
+  .timing-img,
+  .timing-time,
+  .timing-content,
+  .suit-title,
+  .suit-desc,
+  .suit-name,
+  .suit-img,
+  .approve-title,
+  .approve-desc,
+  .approve-input,
+  .approve-question,
+  .approve-choise,
+  .approve-btn,
+  .contact-title,
+  .contact-desc,
+  .contact-name,
+  .contact-link,
+  .footer > * > *{
+    scale: 0;
+    opacity: 0;
+    animation: fadeScroll linear forwards;
+    animation-timeline: view();
+    animation-range: entry -5rem;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+  }
+
+  @keyframes fadeScroll {
+    100% {scale: 1; opacity: 1;}
+  }
+
+  @keyframes scroll-watcher {
+    to {scale: 1 1;}
+  }
+}
