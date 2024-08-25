@@ -10,12 +10,12 @@
   <div class="scroll-watcher"></div>
   <div class="preview container" id="main-content">
     <p class="preview-title">SAVE THE DATE</p>
-    <h2 class="preview-names">Jahongir & Kamila</h2>
+    <h2 class="preview-names">Jaxongir & Kamila</h2>
     <p class="preview-date">October 7, 2024</p>
     <p class="preview-location">Tashkent, Uzbekistan</p>
     <img class="preview-img" src="./media/img/preview.JPG" alt="photo">
   </div>
-  <div class="countdown container">
+  <div class="countdown container disable-container">
     <div><h5 class="wedding-status" id="wedding-status">До свадьбы осталось</h5></div>
     <div class="countdown-timer">
       <div class="countdown-item">
@@ -45,7 +45,7 @@
     </main>
     <p class="invite-date">7.10.2024</p>
   </div>
-  <div class="location container">
+  <div class="location container disable-container">
     <div>
       <main>
         <article class="location-title">Локация</article>
@@ -75,7 +75,7 @@
       </div>
     </div>
   </div>
-  <div class="suit container">
+  <div class="suit container disable-container">
     <div>
       <p class="suit-title">Дресс-Код</p>
       <p class="suit-content">
@@ -87,9 +87,9 @@
       <img class="suit-img" src="./media/img/suit.JPG" alt="photo">
     </div>
   </div>
-  <div class="approve container">
+  <div class="approve container disable-container">
     <p class="approve-title">Подтверждение</p>
-    <p class="approve-desc">Пожалуйста, подтвердите свое присутствие до 22 сентября 2024 года</p>
+    <p class="approve-desc">Пожалуйста, подтвердите свое присутствие до 25 сентября 2024 года</p>
     <input type="text" id="approve-input" class="approve-input" required="required" placeholder="Введите Ф.И.О в данное поле.">
     <div class="approve-choise">
       <input type="radio" name="willbe" id="approve-yes" checked>
@@ -98,23 +98,6 @@
     <div class="approve-choise">
       <input type="radio" name="willbe" id="approve-no">
       <label for="no">Я не смогу прийти</label>
-    </div>
-    <strong class="approve-question">В каком составе ожидать?</strong>
-    <div class="approve-choise">
-      <input type="radio" name="withwho" id="approve-alone" checked>
-      <label for="alone">Буду один / одна</label>
-    </div>
-    <div class="approve-choise">
-      <input type="radio" name="withwho" id="approve-friend">
-      <label for="with-friend">Буду с другом / подругой</label>
-    </div>
-    <div class="approve-choise">
-      <input type="radio" name="withwho" id="approve-partner"> 
-      <label for="with-partner">Буду с парнем / девушкой</label>
-    </div>
-    <div class="approve-choise">
-      <input type="radio" name="withwho" id="approve-family"> 
-      <label for="with-family">Буду с семьей</label>
     </div>
     <button class="approve-btn" onclick="sendApprove()">Подтвердить</button>
   </div>
@@ -139,13 +122,11 @@
     <p class="contact-desc">Не забывайте почаще улыбаться фотографам и видеографам</p>
     <p class="contact-desc">Позднее по этой ссылке Вы сможете просмотреть и сохранить фото/видео файлы с нашего торжества</p>
     <span class="contact-link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="white">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" fill="var(--text-color)">
         <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
         <path d="M0 336c0 79.5 64.5 144 144 144l368 0c70.7 0 128-57.3 128-128c0-61.9-44-113.6-102.4-125.4c4.1-10.7 6.4-22.4 6.4-34.6c0-53-43-96-96-96c-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32C167.6 32 96 103.6 96 192c0 2.7 .1 5.4 .2 8.1C40.2 219.8 0 273.2 0 336z"/>
       </svg>
     </span>
-    <p class="contact-desc">Будем Вам очень признательны, если Вы будете публиковать фото/видео с нашей свадьбы с хештегом #ЖиК2024. Так нам легче будет находить посты с свадьбы. Заранее спасибо!</p>
-    <span></span>
   </div>
   <footer class="footer">
     <div class="footer-row-1">

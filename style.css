@@ -24,11 +24,11 @@
 }
 
 :root {
-  --text-color: #fafafa;
-  --bg-color: #010101;
+  --text-color: #010101;
+  --bg-color: #fafafa;
   --accent-color: #b8b844;
-  --primary-color: #0101fa;
-  --secondary-color: #5757fa;
+  --primary-color: #fbfb01;
+  --secondary-color: #a4a401;
 }
 
 html {
@@ -51,9 +51,21 @@ html {
 
 .container {
   width: 100%;
+  min-height: 30rem;
+  padding-block: 2rem;
   padding-inline: calc(1.5rem * 0.5);
   margin-inline: auto;
   margin-top: 4rem;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border-radius: 2rem;
+  box-shadow: 0 0 .2rem .2rem gray;
+}
+
+.disable-container {
+  box-shadow: none !important;
+  background-color: transparent !important;
+  border-radius: none !important;
 }
 
 .preview {
@@ -63,7 +75,6 @@ html {
   text-align: center;
   border-radius: 2rem;
   padding: 1rem;
-  height: max-content;
 }
 
 .preview-title {
@@ -112,8 +123,10 @@ html {
 }
 
 .countdown {
+  display: block;
+  align-items: center;
   text-align: center;
-  color: var(--bg-color);
+  min-height: max-content !important;
 }
 
 .countdown-timer {
@@ -121,12 +134,7 @@ html {
   grid-template-columns: repeat(4, max-content);
   grid-template-rows: 1fr;
   gap: 0 .7rem;
-  color: var(--text-color);
   justify-content: center;
-}
-
-.countdown-item {
-  color: var(--bg-color);
 }
 
 .countdown-item > p:nth-child(1) {
@@ -136,13 +144,7 @@ html {
 }
 
 .invite {
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  justify-content: center;
   text-align: right;
-  border-radius: 2rem;
-  padding: 1rem;
-  height: 30rem;
   background-image: url("./media/img/invite.JPG");
   background-size: contain;
   background-repeat: no-repeat;
@@ -366,13 +368,8 @@ html {
 }
 
 .contact {
-  color: var(--text-color);
-  background-color: var(--bg-color);
   justify-content: center;
   text-align: center;
-  border-radius: 2rem;
-  padding: 1rem;
-  min-height: 30rem;
 }
 
 .contact-title {
@@ -397,13 +394,13 @@ html {
 }
 
 .footer {
-  color: var(--text-color);
-  background-color: var(--bg-color);
+  color: var(--bg-color) !important;
+  background-color: var(--text-color) !important;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
-  min-height: 6rem;
+  min-height: 6rem !important;
   margin-top: 6rem;
+  border-radius: none;
 }
 
 .footer-row-1 {
@@ -425,7 +422,7 @@ html {
   display: block;
   width: 2rem;
   height: 2rem;
-  background-color: var(--text-color);
+  background-color: var(--bg-color);
   border-radius: .3rem;
 }
 
