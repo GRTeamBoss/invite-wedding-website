@@ -307,8 +307,8 @@ html {
   font-family: "georgia";
   border: none;
   outline: none;
-  color: var(--bg-color);
-  border-bottom: solid 1px var(--bg-color);
+  color: var(--text-color);
+  border-bottom: solid 1px var(--primary-color);
   transition: all linear .1s;
 }
 
@@ -439,16 +439,23 @@ html {
     height: max-content;
   }
   .preview-title {
-    font-size: 4rem;
+    font-size: 2rem;
+  }
+  .preview-names {
+    font-size: 3rem;
   }
   .preview-img {
     width: 90vw;
   }
+  .wedding-status {
+    font-size: 3rem;
+  }
   .invite {
     height: max-content;
-    object-fit: cover;
     text-align: center;
+    background-size: cover;
     mix-blend-mode: saturation;
+    text-shadow: 0 0 2px var(--bg-color);
   }
   .invite-title {
     font-size: 4rem;
@@ -460,6 +467,7 @@ html {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
+    row-gap: 1rem;
   }
   .location-title {
     font-size: 4rem;
