@@ -51,7 +51,7 @@ html {
 
 .container {
   width: 100%;
-  min-height: 30rem;
+  min-height: max-content;
   padding-block: 2rem;
   padding-inline: calc(1.5rem * 0.5);
   margin-inline: auto;
@@ -434,6 +434,7 @@ html {
 @media (max-width: 575px) {
   .container {
     width: 100%;
+    margin-top: 1rem;
   }
   .preview {
     height: max-content;
@@ -478,7 +479,7 @@ html {
   }
   .timing-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr max-content;
     justify-content: center;
   }
   .timing-title {
@@ -489,7 +490,7 @@ html {
   }
   .suit {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr max-content;
   }
   .suit-title {
     font-size: 4rem;
