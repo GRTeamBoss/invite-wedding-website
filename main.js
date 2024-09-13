@@ -44,12 +44,7 @@ const approveWithWhoList = ["approve-alone", "approve-friend", "approve-partner"
 const approveInputEl = document.getElementById("approve-input")
 const approveYesEl = document.getElementById("approve-yes")
 const approveNoEl = document.getElementById("approve-no")
-const approveAloneEl = document.getElementById("approve-alone")
-const approveFriendEl = document.getElementById("approve-friend")
-const approvePartnerEl = document.getElementById("approve-partner")
-const approveFamilyEl = document.getElementById("approve-family")
 let approveWillBe = null
-let approveWithWho = "-"
 
 function sendApprove() {
   const chatIds = [258598355, 53138192, 167628351]
@@ -59,17 +54,8 @@ function sendApprove() {
     approveWillBe = "Нет"
   } else {
     approveWillBe = "Да"
-    if (approveAloneEl.checked !== false) {
-      approveWithWho = "Буду один / одна"
-    } else if (approveFriendEl.checked !== false) {
-      approveWithWho = "Буду с другом / подругой"
-    } else if (approvePartnerEl.checked !== false) {
-      approveWithWho = "Буду с парнем / девушкой"
-    } else {
-      approveWithWho = "Буду с семьей"
-    }
   }
-  const text = `Ф.И.О: ${fullName}%0AБудет на свадьбе: ${approveWillBe}%0AС кем придет на свадьбу: ${approveWithWho}`
+  const text = `Ф.И.О: ${fullName}%0AБудет на свадьбе: ${approveWillBe}`
   for (let chat of chatIds) {
     const URI = `https://api.telegram.org/bot7282021975:AAGwtaeUslKML424Bq8QczgxkZBTIKp8L3M/sendMessage?chat_id=${chat}&text=${text}`
     fetch(URI)
