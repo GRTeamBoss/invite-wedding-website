@@ -60,4 +60,5 @@ function sendApprove() {
     const URI = `https://api.telegram.org/bot7282021975:AAGwtaeUslKML424Bq8QczgxkZBTIKp8L3M/sendMessage?chat_id=${chat}&text=${text}`
     fetch(URI)
   }
+  window.alert(`${text}%0A%0AСообщение отправлено!`)
 }
